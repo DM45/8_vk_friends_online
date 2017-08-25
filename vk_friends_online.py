@@ -13,14 +13,15 @@ def get_online_friends(login, password):
         user_password=password,
     )
     api = vk.API(session)
-    all_friends = api.friends.get(fields='online')
     friends_online = [
-        friends for friends in all_friends if friends.get("online") == 1
+        friends for friends in api.friends.get(fields='online') 
+        if friends.get("online") == 1
     ]
     return friends_online
 
 
 def output_friends_to_console(friends_online):
+    print('Friends online: ')
     for friends in friends_online:
         print(friends.get("last_name"), friends.get("first_name"))
 
