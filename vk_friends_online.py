@@ -14,10 +14,10 @@ def get_online_friends(login, password):
     )
     api = vk.API(session)
     all_friends = api.friends.get(fields='online')
-    online_list = [
+    friends_online = [
         friends for friends in all_friends if friends.get("online") == 1
     ]
-    return online_list
+    return friends_online
 
 
 def output_friends_to_console(friends_online):
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     login = input('Enter login: ')
     password = getpass.getpass('Enter password:')
     try:
-        friends_online = get_online_friends(login, password)
-        output_friends_to_console(friends_online)
+        _friends_online = get_online_friends(login, password)
+        output_friends_to_console(_friends_online)
     except vk.exceptions.VkAuthError:
         print("Wrong login or password")
