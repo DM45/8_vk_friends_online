@@ -40,5 +40,5 @@ if __name__ == '__main__':
     try:
         _friends_online = get_online_friends(login, password)
         output_friends_to_console(_friends_online)
-    except:
+    except vk.exceptions.VkAuthError:
         print("Wrong login or password")
