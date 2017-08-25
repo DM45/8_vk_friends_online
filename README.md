@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-[TODO. There will be project description]
+Check list of friends online in vk.com
 
 # How to Install
 
@@ -9,8 +9,17 @@ Python 3 should be already installed. Then use pip (or pip3 if there is a confli
 ```bash
 pip install -r requirements.txt # alternatively try pip3
 ```
+Then enter login and password
 
 Remember, it is recommended to use [virtualenv/venv](https://devman.org/encyclopedia/pip/pip_virtualenv/) for better isolation.
+
+# Output example
+
+Friends online:
+
+Вася Пупкин
+
+Мистер Смит
 
 # Project Goals
 
